@@ -1,0 +1,21 @@
+{
+    "name": "fyradigital/laravel-toolkit",
+    "description": "Laravel Toolkit",
+    "authors": [
+        {
+            "name": "Fyra",
+            "email": "developers@fyra.io"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "FyraDigital\\LaravelToolkit\\": "src/"
+        }
+    }
+}
