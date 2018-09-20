@@ -19,7 +19,7 @@ trait Helpers
         if ('default'==$versioning && strpos(strtolower($name), 'cloudfront.net')>0) {
             $version = '';
         } else {
-            $version = getVersion($versioning);
+            $version = $this->getVersion($versioning);
         }
         switch (strtolower(substr($name, -3))) {
             case '.js':
