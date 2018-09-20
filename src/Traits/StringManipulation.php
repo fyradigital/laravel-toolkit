@@ -2,15 +2,8 @@
 
 namespace FyraDigital\LaravelToolkit\Traits;
 
-trait Strings
+trait StringManipulation
 {
-    public function addHTTP($str) {
-        if ('http' != strtolower(strpos($str, 0, 4))) {
-            return 'http://' . $str;
-        } else {
-            return $str;
-        }
-    }
     public function truncWords($str, $len = 40, $delimiter = '...') {
         return strlen($str) > $len ? substr($str, 0, strrpos($str, ' ', -(strlen($str) - $len))) . $delimiter : $str;
     }

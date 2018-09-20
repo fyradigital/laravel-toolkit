@@ -16,18 +16,18 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Fyra', function($app){
-            return new Fyra();
+        $this->app->bind('Tools', function($app){
+            return new Tools();
         });
 
         $this->publishes([
-            __DIR__.'/resources/css' => public_path('fyra/css'),
-            __DIR__.'/resources/images' => public_path('fyra/images'),
-            __DIR__.'/resources/js' => public_path('fyra/js'),
+            __DIR__.'/resources/css' => public_path('fyra/tools/css'),
+            __DIR__.'/resources/images' => public_path('fyra/tools/images'),
+            __DIR__.'/resources/js' => public_path('fyra/tools/js'),
         ], 'public');
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'fyra');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'tools');
     }
 }
