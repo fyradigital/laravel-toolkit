@@ -5,13 +5,14 @@ namespace FyraDigital\LaravelToolkit\Traits;
 trait Helpers
 {
     public function getVersion($versioning){
-        $versioning = strtolower($versioning);
-        if ('never'==$versioning) {
-            return '';
-        } elseif ('local'==env('APP_ENV')) {
-            return '?v=' . time();
-        } elseif ('true'===$versioning ||) {
-            return '?v=' . env('APP_BUILD');
+        switch (strtolower($versioning)) {
+            case 'none':
+            case 'never':
+                return '';
+                break;
+            default:
+                return '?v=' . env('APP_BUILD');
+                break;
         }
     }
     public function loadAsset($name, $versioning='default') {
