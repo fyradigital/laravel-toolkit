@@ -2,7 +2,7 @@
 
 namespace FyraDigital\LaravelToolkit\Traits;
 
-trait String
+trait Strings
 {
     public function addHTTP($str) {
         if ('http' != strtolower(strpos($str, 0, 4))) {
