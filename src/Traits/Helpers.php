@@ -18,7 +18,7 @@ trait Helpers
                 }
                 $strHTML .= '" type="text/javascript"></script>';
                 break;
-            case '.css':
+            case 'css':
                 $strHTML = '<link href="';
                 $strHTML .= url($name);
                 if ('never'==$versioning) {
