@@ -2,12 +2,10 @@
 
 namespace FyraDigital\LaravelToolkit\Traits;
 
-use Carbon\Carbon;
-
 trait StringManipulation
 {
     public function formatDate($strDate, $format='n/d/y') {
-        return Carbon\Carbon::parse($strDate)->format($format);
+        return \Carbon\Carbon::parse($strDate)->format($format);
     }
     public function truncWords($str, $len = 40, $delimiter = '...') {
         return strlen($str) > $len ? substr($str, 0, strrpos($str, ' ', -(strlen($str) - $len))) . $delimiter : $str;
