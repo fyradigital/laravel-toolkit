@@ -2,6 +2,8 @@
 
 namespace FyraDigital\LaravelToolkit\Traits;
 
+use Carbon\Carbon;
+
 trait StringManipulation
 {
     public function formatDate($strDate, $format='n/d/y') {
