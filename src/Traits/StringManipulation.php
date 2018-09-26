@@ -8,7 +8,7 @@ trait StringManipulation
         if ($strDate === NULL) {
             return '&ndash;';
         } else {
-            return \Carbon\Carbon::parse($strDate)->format($format);
+            //return \Carbon\Carbon::parse($strDate)->format($format);
         }
     }
     public function truncWords($str, $len = 40, $delimiter = '...') {
