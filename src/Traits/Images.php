@@ -15,5 +15,4 @@ trait Images
         }
         return '<img src="'. $image['url'] .'" ' . $strAttributes . ' />';
     }
-    }
 }
