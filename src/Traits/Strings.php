@@ -2,7 +2,7 @@
 
 namespace FyraDigital\LaravelToolkit\Traits;
 
-trait StringManipulation
+trait Strings
 {
     public function formatDate($strDate, $format='n/d/y') {
         if ($strDate === NULL) {
